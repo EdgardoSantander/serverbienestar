@@ -22,14 +22,14 @@ public class BienestarEmocionalController {
     }
 
     @GetMapping("/buscar")
-    public ResponseEntity<?> getMetrica(@PathVariable Long id){
+    public ResponseEntity<MetricaDTO> getMetrica(@PathVariable Long id){
 
         return ResponseEntity.ok(metricaService.getMetrica(id));
 
     }
 
     @PostMapping("/obtener")
-    public ResponseEntity<?> setBodyMovile(@RequestBody MetricaDTO metricaDTO){
+    public ResponseEntity<MetricaDTO> setBodyMovile(@RequestBody MetricaDTO metricaDTO){
 
         metricaService.guardarMetrica(metricaDTO);
 
