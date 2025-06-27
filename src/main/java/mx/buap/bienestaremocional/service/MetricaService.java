@@ -1,7 +1,12 @@
 package mx.buap.bienestaremocional.service;
 
-import org.springframework.stereotype.Service;
 
-@Service
-public class MetricaService {
+import mx.buap.bienestaremocional.dto.MetricaDTO;
+
+import java.util.List;
+
+public interface MetricaService {
+    public void guardarMetrica(MetricaDTO metricaDTO);
+    public List<MetricaDTO> getAllMetricas();
+    public MetricaDTO getMetrica(Long id);
 }

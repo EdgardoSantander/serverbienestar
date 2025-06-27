@@ -4,7 +4,6 @@ import mx.buap.bienestaremocional.entity.Metrica;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-
-
-public interface EntityRepository {
+@Repository
+public interface MetricaRepository extends JpaRepository<Metrica,Long> {
 }
