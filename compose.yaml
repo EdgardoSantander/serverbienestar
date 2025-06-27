@@ -1,9 +1,10 @@
 services:
   postgres:
     image: 'postgres:latest'
+    container_name: 'db-bienestar-emocional'
     environment:
-      - 'POSTGRES_DB=mydatabase'
-      - 'POSTGRES_PASSWORD=secret'
-      - 'POSTGRES_USER=myuser'
+      - 'POSTGRES_DB=db_bienestar-emocional'
+      - 'POSTGRES_PASSWORD=secret12345'
+      - 'POSTGRES_USER=benitojuarez'
     ports:
-      - '5432'
+      - '5433:5432'
