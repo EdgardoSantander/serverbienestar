@@ -13,10 +13,7 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MetricaDTO implements Serializable {
-
-    @Id
-    @GeneratedValue
-    private Long id;  // Identificador
+    private Long id;
     private Long pasosTotales;  // Pasos dados
     private Double frecuenciaCardiaca;  // Frecuencia cardiaca
     private Double presionArterialSys;  // Presion arterial Systolica
