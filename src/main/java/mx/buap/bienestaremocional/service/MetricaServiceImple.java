@@ -4,11 +4,19 @@ import jakarta.persistence.EntityNotFoundException;
 import mx.buap.bienestaremocional.dto.MetricaDTO;
 import mx.buap.bienestaremocional.entity.Metrica;
 import mx.buap.bienestaremocional.repository.MetricaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class MetricaServiceImple implements MetricaService{
-    public MetricaRepository metricaRepository;
+
+    @Autowired
+    private MetricaRepository metricaRepository;
+
+
 
     @Override
     public void guardarMetrica(MetricaDTO metricaDTO) {
