@@ -27,6 +27,7 @@ public class MetricaServiceImple implements MetricaService{
         metrica.setRitmoCardiacaTotal(metricaDTO.getRitmoCardiacaTotal());
         metrica.setPresionArterialDia(metricaDTO.getPresionArterialDia());
         metrica.setPresionArterialSys(metricaDTO.getPresionArterialSys());
+        metrica.setSuenioCont(metricaDTO.getSuenioCont());
 
         metricaRepository.save(metrica);
 
@@ -42,6 +43,7 @@ public class MetricaServiceImple implements MetricaService{
             metrica.setPresionArterialSys(metricaRepository.getPresionArterialSys());
             metrica.setPresionArterialDia(metricaRepository.getPresionArterialDia());
             metrica.setRitmoCardiacaTotal(metricaRepository.getRitmoCardiacaTotal());
+            metrica.setSuenioCont(metricaRepository.getSuenioCont());
             metrica.setPasosTotales(metricaRepository.getPasosTotales());
 
             return metrica;
@@ -61,6 +63,7 @@ public class MetricaServiceImple implements MetricaService{
             metric.setPresionArterialSys(metrica.getPresionArterialSys());
             metric.setPresionArterialDia(metrica.getPresionArterialDia());
             metric.setRitmoCardiacaTotal(metrica.getRitmoCardiacaTotal());
+            metric.setSuenioCont(metrica.getSuenioCont());
             metric.setPasosTotales(metrica.getPasosTotales());
 
              return metric;
