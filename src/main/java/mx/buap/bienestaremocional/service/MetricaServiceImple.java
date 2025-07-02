@@ -20,14 +20,12 @@ public class MetricaServiceImple implements MetricaService{
 
     @Override
     public void guardarMetrica(MetricaDTO metricaDTO) {
-        Metrica metrica = new Metrica();
-        metrica.setEjercicioCont(metricaDTO.getEjercicioCont());
-        metrica.setPasosTotales(metricaDTO.getPasosTotales());
-        metrica.setFrecuenciaCardiaca(metricaDTO.getFrecuenciaCardiaca());
-        metrica.setRitmoCardiacaTotal(metricaDTO.getRitmoCardiacaTotal());
-        metrica.setPresionArterialDia(metricaDTO.getPresionArterialDia());
-        metrica.setPresionArterialSys(metricaDTO.getPresionArterialSys());
-        metrica.setSuenioCont(metricaDTO.getSuenioCont());
+       // Uso de Builder en lugar de hacer instancia de objeto con new Metrica, solo ponemos Metrica.builder()
+        Metrica metrica = Metrica.builder().ejercicioCont(metricaDTO.getEjercicioCont()).
+                pasosTotales(metricaDTO.getPasosTotales()).frecuenciaCardiaca(metricaDTO.getFrecuenciaCardiaca())
+                .ritmoCardiacaTotal(metricaDTO.getRitmoCardiacaTotal()).presionArterialDia(metricaDTO.getPresionArterialDia()).
+                presionArterialSys(metricaDTO.getPresionArterialSys()).suenioCont(metricaDTO.getSuenioCont()).build();
+
 
         metricaRepository.save(metrica);
 
